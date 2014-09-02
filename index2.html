@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Event Target</title>
+</head>
+<body>
+
+	<script type="text/javascript" src="eventtarget.js"></script>
+	<script type="text/javascript">
+		var listener1 = function (evt) {
+			alert(evt.type);
+		};
+
+		var listener2 = function (evt) {
+			alert(evt.target);
+		};
+
+		var obj = new EventTarget();
+		obj.addListener('load', listener1);
+		obj.addListener('load', listener2);
+
+		obj.__fire({
+			type : 'load'
+		});
+
+		obj.removeListener('load', listener1);
+		obj.removeListener('load', listener2);
+
+		obj.__fire({
+			type : 'load'
+		});
+	</script>
+</body>
+</html>

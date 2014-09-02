@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>|| Toolbar ||</title>
+	<link rel="stylesheet" type="text/css" href="toolbar.css">
+</head>
+<body>
+	<div id="myToolbar" class="toolbar">
+		<span class="toolbar-item"></span>
+		<span class="toolbar-item white"></span>
+		<span class="toolbar-item"></span>
+	</div>
+	
+	<script type="text/javascript" src="eventtarget.js"></script>
+	<script type="text/javascript" src="toolbar.js"></script>
+	<script type="text/javascript">
+		var toolbar = app.createToolbar('myToolbar');
+
+		toolbar.addListener('itemRemoved', function(evt) {
+			alert(evt.type);
+		});
+
+		toolbar.items[0].addListener('enabledChanged', function(evt) {
+			alert(evt.value);
+		});
+	</script>
+</body>
+</html>

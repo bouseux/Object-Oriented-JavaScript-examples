@@ -1,7 +1,7 @@
 Object-Oriented-JavaScript-examples
 ===================================
 
-Tutorial which I took to sharpen up my Javascript skills.
+Tutorial I took to sharpen up my Javascript skills.
 
 Some things that I learnt:
  - You can only self-invoke functions that were built using function expression. For example,

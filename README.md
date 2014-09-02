@@ -2,7 +2,6 @@ Object-Oriented-JavaScript-examples
 ===================================
 
 Tutorial which I took to sharpen up my Javascript skills.
-Tutorial from TutsPlus at https://code.tutsplus.com/courses/object-oriented-javascript/lessons/introduction .
 
 Some things that I learnt:
  - You can only self-invoke functions that were built using function expression. For example,
@@ -16,3 +15,5 @@ Some things that I learnt:
  - In cases when you get very long chains such as `myObj.__proto__.__proto__.__proto__.toString();` which is not efficient, you can define myObj prototype like this `myObj.prototype = Object.create(Object.prototype);` so now there will be no chaining and toString() method is directly accessible, great win.
  - You cannot have private properties in Javascript. Those that you would like to be private, you can indicate using special notation, most common being appending two slashes at the front i.e. `__myPrivateProperty`.
  - The best practice is to start constructors with capital letter i.e. `var Person = function() {}`.
+
+Tutorial from TutsPlus at https://code.tutsplus.com/courses/object-oriented-javascript/lessons/introduction .
